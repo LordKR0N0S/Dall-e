@@ -1,4 +1,4 @@
-export const BASE_ROUTE_API = 'http://localhost:8080';
+export const BASE_ROUTE_API = 'https://dall-e-jxp2.onrender.com';
 
 export const surpriseMePrompts = [
   'an armchair in the shape of an avocado',
