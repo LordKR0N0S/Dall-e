@@ -30,8 +30,6 @@ const CreatePost = () => {
           data: JSON.stringify({ prompt: form.prompt }),
         });
 
-        console.log(response);
-
         setForm({
           ...form,
           photo: `data:image/jpeg;base64,${response.data.photo}`,
@@ -63,7 +61,6 @@ const CreatePost = () => {
         });
 
         await response.data;
-        console.log(response)
         navigate('/');
       } catch (error) {
         alert(error);

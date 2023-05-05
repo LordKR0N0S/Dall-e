@@ -34,9 +34,8 @@ const Home = () => {
           },
         });
 
-        if (response.statusText === 'OK') {
+        if (response.status >= 200 && response.status < 300) {
           const result = await response.data;
-          console.log(result);
           setAllPosts(result.data.reverse());
         }
       } catch (error) {
@@ -47,7 +46,6 @@ const Home = () => {
     };
 
     fetchPosts();
-    console.log('useEffect working');
   }, []);
 
   const handleSearchChange = (e) => {
@@ -65,8 +63,6 @@ const Home = () => {
       }, 500)
     );
   };
-
-  console.log(allPosts)
 
   return (
     <section className='max-w-7xl mx-auto'>
